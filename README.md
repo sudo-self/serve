@@ -23,11 +23,8 @@
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/syntaqx/serve/tree/main)
 
-> 🚨 The `main` branch is currently in active R&D for the next release of `serve`.
-> To use `serve`, please be sure to download a previous [release](https://github.com/syntaqx/serve/releases) as no stability guarantees
-> are being made furter progress has been made towards a release candidate.
 
-## TL;DR
+##brew install server
 
 > It's basically `python -m SimpleHTTPServer 8080` written in Go, because who
 > can remember that many letters?
