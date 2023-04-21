@@ -1,9 +1,5 @@
 # `serve` is a static http server anywhere you need one.
-
-![Untitled 2](https://user-images.githubusercontent.com/119916323/233626674-7716f5c7-a443-48ad-ba88-862926e8fe3d.jpg)
-
-## brew install serve
-
+### brew install serve
 > It's basically `python -m SimpleHTTPServer 8080` written in Go
 
 * HTTPS (TLS)
@@ -42,7 +38,7 @@ The following configuration options are available:
 * `--dir` directory path to serve (defaults to `.`, also configurable by `arg[0]`)
 * `--users` path to users file (defaults to `users.dat`); file should contain lines of username:password in plain text
 
-## Using `serve` manually
+### Using `serve` manually
 
 Besides running `serve` using the provided binary, you can also embed a
 `serve.FileServer` into your own Go program:
@@ -63,6 +59,7 @@ func main() {
 }
 ```
 
+![Untitled 2](https://user-images.githubusercontent.com/119916323/233626674-7716f5c7-a443-48ad-ba88-862926e8fe3d.jpg)
 
 
 As for any pre-built image usage, it is the image user's responsibility to
