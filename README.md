@@ -52,52 +52,6 @@ following command:
 brew install syntaqx/tap/serve
 ```
 
-### Docker
-
-The official [syntaqx/serve][docker-hub] image is available on Docker Hub.
-
-To get started, try hosting a directory from your docker host:
-
-```sh
-docker run -v .:/var/www:ro -d syntaqx/serve
-```
-
-Alternatively, a simple `Dockerfile` can be used to generate a new image that
-includes the necessary content:
-
-```dockerfile
-FROM syntaqx/serve
-COPY . /var/www
-```
-
-Place this in the same directory as your content, then `build` and `run` the
-container:
-
-```sh
-docker build -t some-content-serve .
-docker run --name some-serve -d some-content-serve
-```
-
-#### Exposing an external port
-
-```sh
-docker run --name some-serve -d -p 8080:8080 some-content-serve
-```
-
-Then you can navigate to http://localhost:8080/ or http://host-ip:8080/ in your
-browser.
-
-#### Using environment variables for configuration
-
-[12-factor-config]: https://12factor.net/config
-
-Currently, `serve` only supports using the `PORT` environment variable for
-setting the listening port. All other configurations are available as CLI flags.
-
-> In future releases, most configurations will be settable from both the CLI
-> flag as well as a compatible environment variable, aligning with the
-> expectations of a [12factor app][12-factor-config]. But, that will require a
-> fair amount of work before the functionality is made available.
 
 Here's an example using `docker-compose.yml` to configure `serve` to use HTTPS:
 
@@ -115,34 +69,6 @@ services:
       - 1234
     command: serve -ssl -cert=/etc/ssl/cert.pem -key=/etc/ssl/key.pem -dir=/var/www
 ```
-
-The project repository provides an example [docker-compose](./docker-compose.yml)
-that implements a variety of common use-cases for `serve`. Feel free to use
-those to help you get started.
-
-### Download the binary
-
-Quickly download install the latest release:
-
-```sh
-curl -sfL https://install.goreleaser.com/github.com/syntaqx/serve.sh | sh
-```
-
-Or manually download the [latest release][releases] binary for your system and
-architecture and install it into your `$PATH`.
-
-### From source
-
-To build from source, check out the instructions on getting started with
-[development](#development).
-
-## Usage
-
-```sh
-serve [options] [path]
-```
-
-> `[path]` defaults to `.` (relative path to the current directory)
 
 Then simply open your browser to http://localhost:8080 to view your server.
 
@@ -213,15 +139,7 @@ func main() {
 }
 ```
 
-## License
 
-[MIT]: https://opensource.org/licenses/MIT
-
-`serve` is open source software released under the [MIT license][MIT].
-
-As with all Docker images, these likely also contain other software which may be
-under other licenses (such as Bash, etc from the base distribution, along with
-any direct or indirect dependencies of the primary software being contained).
 
 As for any pre-built image usage, it is the image user's responsibility to
 ensure that any use of this image complies with any relevant licenses for all
