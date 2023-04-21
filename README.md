@@ -1,9 +1,6 @@
-# <img src="https://raw.githubusercontent.com/syntaqx/serve/main/docs/logo.svg?sanitize=true" width="250">
-
-`serve` is a static http server anywhere you need one.
+# `serve` is a static http server anywhere you need one.
 
 ![Untitled 2](https://user-images.githubusercontent.com/119916323/233626674-7716f5c7-a443-48ad-ba88-862926e8fe3d.jpg)
-
 
 ## brew install serve
 
