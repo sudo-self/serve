@@ -21,33 +21,19 @@
 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/syntaqx/serve.svg)][docker-hub]
 [![Docker Pulls](https://img.shields.io/docker/pulls/syntaqx/serve.svg)][docker-hub]
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/syntaqx/serve/tree/main)
+![Untitled 2](https://user-images.githubusercontent.com/119916323/233626674-7716f5c7-a443-48ad-ba88-862926e8fe3d.jpg)
 
 
 ##brew install server
 
-> It's basically `python -m SimpleHTTPServer 8080` written in Go, because who
-> can remember that many letters?
-
-### Features
+> It's basically `python -m SimpleHTTPServer 8080` written in Go
 
 * HTTPS (TLS)
 * CORS support
 * Request logging
 * `net/http` compatible
 
-## Installation
 
-`serve` can be installed in a handful of ways:
-
-### Homebrew on macOS
-
-If you are using [Homebrew][] on macOS, you can install `serve` with the
-following command:
-
-```sh
-brew install syntaqx/tap/serve
-```
 
 
 Here's an example using `docker-compose.yml` to configure `serve` to use HTTPS:
