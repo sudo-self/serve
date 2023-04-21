@@ -24,7 +24,7 @@
 ![Untitled 2](https://user-images.githubusercontent.com/119916323/233626674-7716f5c7-a443-48ad-ba88-862926e8fe3d.jpg)
 
 
-##brew install server
+## brew install serve
 
 > It's basically `python -m SimpleHTTPServer 8080` written in Go
 
@@ -32,9 +32,6 @@
 * CORS support
 * Request logging
 * `net/http` compatible
-
-
-
 
 Here's an example using `docker-compose.yml` to configure `serve` to use HTTPS:
 
@@ -66,40 +63,6 @@ The following configuration options are available:
 * `--key` path to the ssl key file (defaults to `key.pem`)
 * `--dir` directory path to serve (defaults to `.`, also configurable by `arg[0]`)
 * `--users` path to users file (defaults to `users.dat`); file should contain lines of username:password in plain text
-
-## Development
-
-To develop `serve` or interact with its source code in any meaningful way, be
-sure you have the following installed:
-
-### Prerequisites
-
-* [Git][git]
-* [Go 1.13][golang]
-
-### Tooling
-
-* [pre-commit](https://pre-commit.com/)
-
-> __Note__: While the tooling isn't explicitly required in order to build and
-> run the project, it's for everyone's benefit that you leverage it.
-
-### Install
-
-You can download and install the project from GitHub by simply running:
-
-```sh
-git clone git@github.com:syntaqx/serve.git && cd $(basename $_ .git)
-make install
-```
-
-This will install `serve` into your `$GOPATH/bin` directory, which assuming is
-properly appended to your `$PATH`, can now be used:
-
-```sh
-$ serve version
-serve version v0.0.6-8-g5074d63 windows/amd64
-```
 
 ## Using `serve` manually
 
